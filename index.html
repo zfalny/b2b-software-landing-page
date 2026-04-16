@@ -294,7 +294,7 @@
             border-radius: var(--radius-lg);
             border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: var(--shadow-lg), var(--shadow-glow);
-            display: flex;
+            display: none; /* Hides on mobile */
             align-items: center;
             justify-content: center;
             overflow: hidden;
@@ -963,6 +963,10 @@
 
         /* Media Queries Tabela & Desktop */
         @media (min-width: 768px) {
+            .hero-visual {
+                display: flex;
+            }
+
             .hero-content {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1763,7 +1767,7 @@
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('https://cash-n8n.mn5cro.easypanel.host/webhook/5ec97cc1-41b1-42a3-8511-a4b4b6aa828c', {
+                const response = await fetch('https://cash-n8n.mn5cro.easypanel.host/webhook-test/5ec97cc1-41b1-42a3-8511-a4b4b6aa828c', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
